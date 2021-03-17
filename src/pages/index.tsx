@@ -1,30 +1,32 @@
-import Head from "next/head";
+import Link from "next/link";
+import Container from "../components/container/Container";
 
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&display=swap"
-          rel="stylesheet"
-        />{" "}
-      </Head>
-      <div className="container">
-        <header>
-          <h3>Joao Paulo</h3>
-        </header>
-        <main>
-          <section className="main-card">
-            <h1>......</h1>
-            <button className="button-primary">Conteudo</button>
-            <button className="button-warning">Contato</button>
-            <button className="button-secondary">Repositorio</button>
-          </section>
-        </main>
-      </div>
+      <Container pageTitle="JoaoP.dev">
+        <section className="main-card">
+          <h3>web.dev.front.end</h3>
+          <br />
+          <nav className="main-links">
+            <Link href="/labs">
+              <a href="/labs" className="button-primary">
+                Labs{"</>"}
+              </a>
+            </Link>
+            <Link href="/labs">
+              <a href="/labs" className="button-secondary">
+                Repo;
+              </a>
+            </Link>
+            <Link href="/labs">
+              <a href="/labs" className="button-warning">
+                Contato
+              </a>
+            </Link>
+          </nav>
+        </section>
+      </Container>
     </>
   );
 }

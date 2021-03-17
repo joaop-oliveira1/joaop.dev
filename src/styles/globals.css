@@ -13,7 +13,7 @@ body {
 
 :root {
   --background-dark-color: #101010;
-  --background-light-color: #ea4c8900;
+  --background-light-color: #F8FAFC;
   --primary-button-color: #4e7cff;
   --secondary-button-color: #535c77;
   --warning-button-color: #eeb800;
@@ -42,7 +42,6 @@ p {
 }
 
 h1, h2, h3, h4, h5 {
-  margin: 3rem 0 1.38rem;
   font-weight: 400;
   line-height: 1.3;
 }
@@ -54,13 +53,28 @@ h1 {
 
 h2 {font-size: var(--h2);}
 
-h3 {font-size: var(--h3);}
+h3 {margin:0; font-size: var(--h3);}
 
 h4 {font-size: var(--h4);}
 
 h5 {font-size: var(--h5);}
 
 small, .text_small {font-size: calc(var(--base-size) / var(--type-scale));}
+
+header {
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header > nav {
+  display: none;
+} 
+
+header > h2 {
+  font-weight: bolder;
+}
 
 main {
   padding: 10em;
@@ -86,13 +100,19 @@ main {
   font-size: x-large;
 }
 
+.main-links {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
 .button-primary {
   padding: 1em 4em;
   margin: .5em .5em;
   border-radius: .25em;
   width: 100%;
   cursor: pointer;
-  font-size: large;
+  font-size: x-large;
   font-family: var(--font-family);
   font-weight: bold;
   color: white;
@@ -110,7 +130,7 @@ main {
   margin: .5em .5em;
   width: 100%;
   cursor: pointer;
-  font-size: large;
+  font-size: x-large;
   font-family: var(--font-family);
   font-weight: bold;
   color: white;
@@ -125,7 +145,7 @@ main {
   margin: .5em .5em;
   cursor: pointer;
   width: 100%;
-  font-size: large;
+  font-size: x-large;
   font-family: var(--font-family);
   font-weight: bold;
   color: white;
@@ -141,16 +161,37 @@ main {
 
 @media (min-width: 58.1875em) {
 
-.main-card {
-  align-items: flex-start;
-  padding: 3em 3em;
-  z-index: 1;
-  border-radius: 1em;
-  border: solid 2px transparent;
-  background-color: red;
- /* background: rgba(255,255,255, 0.2); */
-  backdrop-filter: blur(3em);
-  background-clip: padding-box;
-  box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03)
-}
+ .button-primary {
+   font-size: medium;
+   width: 33%;
+ }
+
+ .button-secondary {
+   font-size: medium;
+   width: 33%;
+ }
+
+ .button-warning {
+   font-size: medium;
+   width: 33%;
+ }
+
+ .main-card {
+   align-items: flex-start;
+   padding: 3em 3em;
+   z-index: 1;
+   border-radius: 1em;
+   border: solid 2px transparent;
+   background-color: transparent;
+   background: rgba(255,255,255, 0.5); 
+   backdrop-filter: blur(3em);
+   background-clip: padding-box;
+   box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03)
+ }
+
+ .main-links {
+   flex-flow: row nowrap;
+   align-items: flex-start;
+ }
+
 }
