@@ -1,3 +1,3 @@
 /**@title Page Routing */
 
-export default {};
+export default () => <div>Hello</div>;
