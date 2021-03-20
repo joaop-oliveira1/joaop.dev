@@ -11,8 +11,8 @@ export default function Home() {
           </h3>
           <br />
           <nav className="flex justify-start flex-wrap items-center md:flex-nowrap">
-            <Link href="/labs">
-              <a href="/labs" className="btn btn-primary w-full">
+            <Link href="/blog">
+              <a href="/blog" className="btn btn-primary w-full">
                 Labs{"</>"}
               </a>
             </Link>
