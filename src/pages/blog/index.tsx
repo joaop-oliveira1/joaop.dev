@@ -1,6 +1,6 @@
 import * as contentful from "contentful";
+import * as uuid from "uuid";
 import Link from "next/link";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import Container from "../../components/container/Container";
 import ErlernmeyerIcon from "../../components/assets/icons/ErlenmeyerIcon";
 
@@ -17,23 +17,27 @@ export interface LabsProps {
 const Labs = (props: LabsProps): JSX.Element => {
   return (
     <Container pageTitle="Labs</>">
-      <ul className=" px-5 py-5 md:mx-20 ">
+      <ul className="">
         {props.posts.map((lab) => (
           <>
-            <Link href="/blog/post/[id]" as={`/blog/post/${lab.sys.id}`}>
+            <Link
+              href="/blog/post/[id]"
+              as={`/blog/post/${lab.sys.id}`}
+              key={uuid.v4()}
+            >
               <a href="/blog/post/[id]">
-                <li className=" flex justify-start items-center cursor-pointer bg-white my-5 md:mx-20 transition-all ease-in-out duration-150 hover:shadow-lg hover:bg-gray-100 rounded-lg">
+                <li className=" flex justify-start items-center cursor-pointer bg-white my-5 md:mx-20 transition-all ease-in-out duration-150 shadow-lg hover:bg-gray-100 rounded-lg">
                   <section className="bg-gray-200 p-3 rounded-l-lg text-blue-400 text-4xl mr-5">
                     <ErlernmeyerIcon className="h-16" />
                   </section>
-                  /**
-                  <span className="mx-2  font-bold italic text-lg text-indigo-600">
-                    @title
-                  </span>
-                  <span className="font-semibold mx-2 text-gray-600">
-                    {lab.fields.title}
-                  </span>
-                  */
+                  <section className="flex justify-start items-center flex-wrap">
+                    <span className="mx-2  font-bold italic text-lg text-indigo-600">
+                      @title
+                    </span>
+                    <span className="font-semibold mx-2 text-gray-600">
+                      {lab.fields.title}
+                    </span>
+                  </section>
                 </li>
               </a>
             </Link>

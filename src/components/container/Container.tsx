@@ -12,7 +12,11 @@ const Container = (props: ContainerProps): JSX.Element => {
   return (
     <div className="container">
       <Header title={props.pageTitle} />
-      <Main className={props.className}>{props.children}</Main>
+      <Main
+        className={`md:w-1/2 place-self-start justify-self-center  ${props.className}`}
+      >
+        {props.children}
+      </Main>
     </div>
   );
 };

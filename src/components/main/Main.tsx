@@ -5,7 +5,7 @@ export interface MainProps {
 }
 
 const Main = (props: MainProps): JSX.Element => {
-  return <main className="p-4 ">{props.children}</main>;
+  return <main className={`p-4 ${props.className}`}>{props.children}</main>;
 };
 
 Main.propTypes = {

@@ -16,16 +16,20 @@ export default function Home() {
                 Labs{"</>"}
               </a>
             </Link>
-            <Link href="/labs">
-              <a href="/labs" className="btn btn-secondary w-full">
-                Repo;
-              </a>
-            </Link>
-            <Link href="/contact">
-              <a href="/contact" className="btn btn-warning w-full">
-                pm.me
-              </a>
-            </Link>
+            <a
+              href="https://github.com/joaop-oliveira1"
+              target="_blank"
+              className="btn btn-secondary w-full"
+            >
+              Repo;
+            </a>
+            <a
+              href="https://forms.formium.io/f/6056998b0304f100014f244e"
+              target="_blank"
+              className="btn btn-warning w-full"
+            >
+              pm.me
+            </a>
           </nav>
         </section>
       </Container>
