@@ -23,13 +23,11 @@ export default function Home() {
             >
               Repo;
             </a>
-            <a
-              href="https://forms.formium.io/f/6056998b0304f100014f244e"
-              target="_blank"
-              className="btn btn-warning w-full"
-            >
-              pm.me
-            </a>
+            <Link href="/contact">
+              <a href="/contact" className="btn btn-warning w-full">
+                pm.me
+              </a>
+            </Link>
           </nav>
         </section>
       </Container>
