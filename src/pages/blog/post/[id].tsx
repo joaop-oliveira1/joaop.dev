@@ -13,8 +13,8 @@ export interface PostProps {
   post: Entry<ContentfulPost>;
 }
 
-const Post = (props: PostProps): JSX.Element => {
-  return <> {documentToReactComponents(props.post.fields.content)}</>;
+const Post = ({ post }: PostProps): JSX.Element => {
+  return <> {documentToReactComponents(post.fields.content)}</>;
 };
 
 export async function getStaticPaths(x) {
@@ -24,7 +24,7 @@ export async function getStaticPaths(x) {
   }));
   return {
     paths,
-    fallback: true,
+    fallback: false,
   };
 }
 
