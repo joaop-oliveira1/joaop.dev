@@ -1,7 +1,6 @@
 import Head from "next/head";
-import { useEffect, useState } from "react";
-import ServiceWorkerContext from "../lib/ServiceWorkerContext";
 import "../styles/tailwind.css";
+// import "tailwindcss/tailwind.css";
 
 function MyApp({ Component, pageProps }) {
   return (
