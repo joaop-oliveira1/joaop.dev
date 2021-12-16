@@ -1,13 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
     <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
-  </body>
+</head>
+<body>
+<header>
+    <h1>joaop.dev</h1>
+    <nav>
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="#background" class="menu-link">Background</a>
+            </li>
+            <li class="nav-item">
+                <a target="#skills" class="menu-link">Skills</a>
+            </li>
+            <li class="nav-item">
+                <a target="#social" class="menu-link">Social</a>
+            </li>
+            <li class="nav-item">
+                <a target="#contact" class="menu-link">Contact Me</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section id="background" class="background">
+        <article>
+            <h3>My Background</h3>
+            <p>
+                I build and maintain web applications for 5 years, using JavaScript with TypeScript, I have experience
+                with User Interface/User Experience, SSR(Server Side Rendering), Monorepo Architectures, and CI/CD
+                Pipelines, Design Patterns, Agile Methodologies and I also have experience with back end development
+                using Node.JS, RESTful APIs services, Express.JS, NoSQL Databases such as MongoDB, and SQL Databases
+                like Oracle.
+            </p>
+        </article>
+    </section>
+    <section id="skills" class="">
+        <article>
+            <h3>Skills</h3>
+            <ul>
+                <li>JavaScript</li>
+                <li>CSS</li>
+                <li>HTML5</li>
+                <li>Vue.JS</li>
+            </ul>
+        </article>
+    </section>
+    <section id="social">
+        <article>
+            <h3>Social</h3>
+            <ul>
+                <li><a>GitHub</a></li>
+                <li><a>Linkedin</a></li>
+            </ul>
+        </article>
+    </section>
+    <section id="contact">
+        <article>
+            <h3>contact</h3>
+            <form>
+                <label>E-mail</label>
+                <input name="email" type="email"/>
+                <label>Message</label>
+                <textarea name="message" ></textarea>
+                <button type="submit"> Send Message</button>
+            </form>
+        </article>
+    </section>
+</main>
+<script type="module" src="/main.js"></script>
+</body>
 </html>
