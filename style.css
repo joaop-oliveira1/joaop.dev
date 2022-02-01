@@ -4,6 +4,7 @@
     --primary: #a855f7;
     --accent: #10b981;
     --text-color: #334155;
+    --rounded: .375rem;
 
 }
 
@@ -88,45 +89,89 @@ li {
     transition: all 150ms ease-in;
     padding: .275rem .275rem;
     margin-top: 1rem;
+    border-radius: var(--rounded);
 }
 
 .nav-item:hover {
-    border-radius: .375rem;
     background-color: var(--primary);
     color: white;
 }
 
 .nav-item:active {
-    border-radius: .375rem;
     background-color: var(--primary);
     color: white;
 }
 
 .nav-item:focus {
-    border-radius: .375rem;
     background-color: var(--primary);
     color: white;
     outline: none;
 }
 
 .menu-link {
-    text-decoration: none
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .menu-link:active {
     color: white;
 }
 
+.menu-link:visited {
+  color: var(--primary);
+}
+
+.menu-link:hover {
+  color: white;
+}
+
 .menu-link:focus {
     color: white;
 }
 
-section {
+article {
     padding: .375rem;
 }
 
 label {
     display: block;
+}
+
+.skills-container {
+  background-color: var(--primary);
+  color: white;
+}
+
+.skill {
+  font-weight: bold;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: start;
+  align-items: start;
+}
+
+.skill > p {
+  margin-bottom: .375rem;
+}
+
+.skill-knowledge-bar {
+  background-color: white;
+}
+
+.skill-knowledge-bar[data-state="100"] {
+  padding: 5px 250px;
+}
+
+.skill-knowledge-bar[data-state="75"] {
+  padding: 5px 187px;
+}
+
+.skill-knowledge-bar[data-state="50"] {
+  padding: 5px 125px;
+}
+
+.skill-knowledge-bar[data-state="25"] {
+  padding: 5px 62.5px;
 }
 
 @media only screen and (min-width: 768px) {
